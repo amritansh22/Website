@@ -1,0 +1,740 @@
+<?php
+  //phpinfo();
+  error_reporting(E_ALL);
+  ini_set("display_errors", "1");
+?>
+
+<!doctype html>
+
+<html>
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PHP Contact Form</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <!-- Optional theme
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    -->
+	<script src="https://use.fontawesome.com/daf7cdc4e5.js"></script>
+	   <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+     
+<style>
+body {
+padding: 0;
+margin: 0;
+}
+	body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden}
+#bars
+{
+display:inline-block;
+color:white;
+}
+#text
+{
+display:inline;
+font-size:15px;
+color:white;
+font-family: "Lucida Sans Unicode";
+}	
+.navbar-brand
+{
+color:white !important;
+font-size:25px;
+}
+.navbar-default
+{
+background-color:#2C3E50;
+}
+.brand-text
+{
+color:white;
+}
+.active
+{
+color:white !important;
+}
+h4
+{
+color:white !important;
+padding:0px;
+margin:0px;
+font-weight:bold;
+}
+.home
+{
+background-color:grey;
+width:100%;
+height:100px;
+color:white;
+font-weight:bold !important;
+padding-top:10px;
+font-family:"Times New Roman";
+}
+#web
+{
+height:300px;
+width:100%;
+max-width: 100%;
+height: auto;
+}
+#test
+{
+width:100%;
+height:500px;
+background-color:grey;
+position: relative;
+background-color:#03111e;
+}
+#tt
+{
+width:60%;
+height:100%;
+background-color:#03111e;
+ margin: 0 auto;
+}
+#testimonial-img
+{
+border-radius:50%;
+height:199px;
+width:198px;
+margin:0 auto;
+display:block;
+}
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+h2
+{
+font-family:"Sans Serif";
+}
+#message,#message-email,#message-mess
+{
+color:red;
+}
+.fa-mobile
+{
+color:blue;
+}
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+button.accordion.active, button.accordion:hover {
+    background-color: #b1bac9;
+    color:white;
+}
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active:after {
+    content: "\2212";
+}
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+@media only screen and (max-width: 1020px) and (min-width: 480px) {
+    #plus {
+        display:none;
+    }
+}
+@media only screen and (max-width: 480px) and (min-width: 100px) {
+    #minus {
+        display:none;
+    }
+}
+.demo1
+{
+display:inline-block;
+list-style-type:none;
+}
+.demo2
+{
+display:inline-block;
+list-style-type:none;
+}
+.demo3
+{
+list-style-type:none;
+display:inline-block;
+}
+.demo4
+{
+list-style-type:none;
+padding-left:65px;
+display:inline-block;
+}
+#minus
+{
+background-color:#294860;
+width:100%;
+ margin-left: 0px;
+  margin-top: 0px;
+}
+#minus ul a
+{ 
+color:#ffcccc;
+}
+#minus ul a:hover
+{
+color:white;
+}
+#minus ul a:active
+{
+color:red;
+}
+#head
+{
+color:white;
+font-size:25px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+overflow-x: hidden;
+}
+#l1
+{
+display:block;
+}
+#l2
+{
+display:block;
+}
+#l3
+{
+display:block;
+}
+#accd_ul
+{
+list-style-type:none;
+}
+.panel  a
+{
+text-decoration:none;
+width:50%;
+color:black;
+font-size:14px;
+}
+.panel li:hover
+{
+background-color:#b3c6ff;
+}
+.panel li:active
+{
+background-color:#b3c6ff; 
+}
+.panel ul
+{
+list-style-type:none;
+}
+#grad
+{
+height:100vh;
+width:100vw;
+	background-image: url(https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-creative/master/img/header.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+}
+#photo img {
+width:500px;
+height:500px;
+}
+ #photo #lo {background-color: red;
+	
+	height: 500px;
+	width: 500px;
+	
+}
+spinner {
+   
+  margin-top:50%;
+ 
+  margin-left:50%;
+  
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+.grad-head {
+color:white;
+}
+.head
+{
+font-size:50px;
+}
+.sub-head
+{
+}
+.content
+{
+ 
+ width:100%;
+height:300px;
+ position:absolute;
+text-align:center;
+   top: 40%;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+    
+text-transform: uppercase;
+}
+.button-head {
+padding: 15px 30px;
+background-color:#F05F40;
+border-radius:300px;
+border: none;
+color:white;
+outline: none;  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+ 
+}
+.button-head:hover {
+background-color:#2C3E50;
+}
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+</style>
+    
+    
+  </head>
+  
+  <body>
+  
+
+
+
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+         <div id="text">Menu</div>
+        <div id="bars">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        
+        </div>
+      </button>
+<div id="brand-text">
+      <a class="navbar-brand" href="#">Brand</a></div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+       
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="page-scroll"><a href="#"><h4>Home</h4></a></li>
+        <li class="page-scroll"><a href="#"><h4>Products</h4></a></li>
+        <li class="page-scroll"><a href="#"><h4>Contact</h4></a></li>
+       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+    
+  <div id ="grad">
+<div class="content">
+<h1 class="grad-head head text-center">Want a website? </h1>
+<h2 class="grad-head subhead text-center">Then you are on the right place<h2>
+<button class="button button-head">Get Now </button>
+</div>
+</div>
+
+
+
+
+
+
+   <img data-src="web.jpg" id="web" alt="Home">
+   <noscript>
+      <img src="web.jpg" id="web" alt="Home">
+      <style>
+      #web { content:hidden;}
+      </style>
+   </noscript>
+    <div class="home">
+      <h1 class="text-center">Website design</h1>
+      </div>    
+ 
+
+
+
+
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      
+<div id="test">
+ <div id="tt">
+  <img data-src="img_avatar2.png" id="testimonial-img">
+   <div id="name">
+    <h2 class="text-center">John Doe<h2>
+   </div>
+     <div id="text">
+     <p> " I wanted to make a website and I didn't knew how to do that. One of my friend told me to go to farzikam.cf and get a website made from there. That was life changing experience."</p>
+      </div>
+ </div>
+</div>
+
+
+    </div>
+
+    <div class="item">
+     
+<div id="test">
+ <div id="tt">
+  <img data-src="img_avatar2.png" id="testimonial-img">
+   <div id="name">
+    <h2 class="text-center">John Doe<h2>
+   </div>
+     <div id="text">
+     <p> " I wanted to make a website and I didn't knew how to do that. One of my friend told me to go to farzikam.cf and get a website made from there. That was life changing experience."</p>
+      </div>
+ </div>
+</div>
+
+
+    </div>
+
+    <div class="item">
+      
+<div id="test">
+ <div id="tt">
+  <img data-src="img_avatar2.png" id="testimonial-img">
+   <div id="name">
+    <h2 class="text-center">John Doe<h2>
+   </div>
+     <div id="text">
+     <p> " I wanted to make a website and I didn't knew how to do that. One of my friend told me to go to farzikam.cf and get a website made from there. That was life changing experience."</p>
+      </div>
+ </div>
+</div>
+
+
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class ="container" id="cnt">
+   <form name="myForm" class="form-horizontal" role="form" method="POST" id="formSubmit" action="http://farzikam.cf/contact-form-challenge.php#form-heading">
+   <div id="form-heading"><h1 class="text-center">Contact Us </h1></div>
+<?php
+if (isset ($_POST["submit"]))
+{
+$name=$_POST["name"];
+$email=$_POST ["email"];
+$message=$_POST["message"];
+ $from = $email;
+		  $to = "kycatm108@gmail.com";
+		  $subject = "Contact Form Submitted";
+		   $body = "The following form was submitted by ----$name---- .The following message was sent with the contact request::::::::::---$message";
+		   $headers = "From: $from";
+		  
+		  if (mail($to, $subject, $body, $headers)) { 
+		  
+		  ?>
+          
+            <div class="alert alert-success">
+            
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Success!</strong> Your form was submitted! We will be in touch!
+            
+            </div>
+          
+          <?php
+		  
+		  } 
+		  
+		  else { 
+		  
+		  ?>
+		  
+            <div class="alert alert-danger">
+            
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Error!</strong> There was a problem sending the email! Please try again later. 
+            
+            </div>
+		  
+		  <?php 
+		  }
+		  
+		  
+		  
+		
+		} // form isset test
+		
+		?>
+
+                   <div class="form-group">
+          
+            <label for="firstName=" class="col-sm-2 control-label">Full Name:</label>
+            
+            <div class="col-sm-10">
+            
+              <input type="text" name="name" class="form-control" id="input">
+                <p id="message"></p>
+            </div>
+          
+          </div>
+          
+          
+          
+          <div class="form-group">
+          
+            <label for="emailAddress=" class="col-sm-2 control-label">Email Address:</label>
+            
+            <div class="col-sm-10">
+            
+              <input type="email" name="email" class="form-control" id="input-email">
+               <p id="message-email"></p>
+            </div>
+          
+          </div>
+          
+          <div class="form-group">
+          
+            <label for="message=" class="col-sm-2 control-label">Message:</label>
+            
+            <div class="col-sm-10">
+            
+              <textarea name="message" class="form-control" rows="5" id="mess"></textarea>
+               <p id="message-mess"></p>
+            </div>
+          
+          </div>
+          
+          <div class="form-group">
+            
+            <div class="col-sm-10 col-sm-offset-2">
+            
+              <button type="submit" name="submit" onclick="return myfunction()" class="btn btn-primary">Submit Form</button>
+            
+            </div>
+          
+          </div>
+        
+        </form>
+      
+    </div> 
+
+<div id="plus">
+
+<button class="accordion" id="h1">Products</button>
+<div class="panel">
+    <ul id="accd_ul">
+    <li> <a id=l1" href="farzikam.cf" title="Standard loan" target="_blank"> Standard loan </a></li>
+              <li>  <a id="l2" href="#" title="Promo loans">Promo loans</a></li>
+                <a id="l3" href="#" title="Promo loans"> <li> Insurance for loans </li> </a>
+     </ul>
+ </div>
+<button class="accordion">About Loans</button>
+<div class="panel">
+   <ul>
+    <li><a href="#" title="How to apply">How to apply</a></li>
+                <li><a href="#" title="Our partner stores">Our partner stores</a></li>
+                <li><a href="#" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                <li><a href="#" title="Safety guarantee">Safety guarantee</a></li>
+         </ul>   </div>
+<button class="accordion">For Customers</button>
+<div class="panel">
+   <ul>
+     <li><a href="#" title="Financial literacy">Financial literacy</a></li>
+                <li><a href="#" title="Payments &amp; Guidelines">Payments &amp; Guidelines</a></li>
+                <li><a href="#" title="Menu">Menu</a></li>
+               <li><a href="#" title="FAQ">FAQ</a></li>
+        </ul> 
+    </div>
+<button class="accordion">Title</button>
+<div class="panel">
+ <ul>
+  <li><a href="#" title="About us">About us</a></li>
+                <li><a href="#" title="News">News</a></li>
+                <li><a href="#" title="Careers">Careers</a></li>
+                <li><a href="#" title="Contacts">Contacts</a></li>
+          </ul> 
+   </div>
+</div>
+<div id="minus">
+        <div class="row">
+<div class="col-sm-3 col-sm-offset col-md-3">
+            <ul class="demo1">
+                <li id="head">Products</li>
+                <li><a href="#" title="All Products">All products</a></li>
+                <li><a href="farzikam.cf" title="Standard loan" target="_blank">Standard loan</a></li>
+                <li><a href="#" title="Promo loans">Promo loans</a></li>
+                <li><a href="#" title="Promo loans">Insurance for loans</a></li>
+            </ul>
+</div>
+<div class="col-sm-3 col-sm-offset col-md-3">
+            <ul class="demo2">
+                <li id="head">About Loans</li>
+                <li><a href="#" title="How to apply">How to apply</a></li>
+                <li><a href="#" title="Our partner stores">Our partner stores</a></li>
+                <li><a href="#" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                <li><a href="#" title="Safety guarantee">Safety guarantee</a></li>
+            </ul>
+</div>
+<div class="col-sm-3 col-sm-offset col-md-3">
+            <ul class="demo3">
+                <li id="head">For Customers</li>
+                <li><a href="#" title="Financial literacy">Financial literacy</a></li>
+                <li><a href="#" title="Payments &amp; Guidelines">Payments &amp; Guidelines</a></li>
+                <li><a href="#" title="Menu">Menu</a></li>
+               <li><a href="#" title="FAQ">FAQ</a></li>
+           </ul>
+</div>
+<div class="col-sm-3 col-sm-offset col-md-3">
+            <ul class="demo4">
+                <li id="head">Title</li>
+                <li><a href="#" title="About us">About us</a></li>
+                <li><a href="#" title="News">News</a></li>
+                <li><a href="#" title="Careers">Careers</a></li>
+                <li><a href="#" title="Contacts">Contacts</a></li>
+            </ul>
+</div>
+        </div>
+</div>
+  
+<script>
+  function myfunction()
+{
+var name= document.getElementById("input").value;
+var email= document.getElementById("input-email").value;
+var mess= document.getElementById("mess").value;
+if (name==""||email==""||mess=="")
+{
+if (name=="")
+{
+document.getElementById ("input").style.border="2px solid red";
+document.getElementById("message").innerHTML="&middot;* Please enter your name";
+}
+if (email=="")
+{
+document.getElementById ("input-email").style.border="2px solid red";
+document.getElementById("message-email").innerHTML="&middot; Please enter your email address";
+}
+if (mess=="")
+{
+document.getElementById ("mess").style.border="2px solid red";
+document.getElementById("message-mess").innerHTML="&middot; Please enter your message";
+}
+return false;
+}
+else
+{
+document.getElementById("formSubmit").submit();
+return true;
+}
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+<script>
+window.addEventListener('load', function(){
+    var allimages= document.getElementsByTagName('img');
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
+}, false)
+</script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="JQUERY.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+     </body>
+</html
